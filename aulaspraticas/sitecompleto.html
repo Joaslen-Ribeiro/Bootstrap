@@ -11,23 +11,33 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>Olá, mundo!</title>
-
+   
     <style>
         .tm-social {
             width: 50px;
             height: 50px;
         }
     </style>
+<script src="js/validator.min.js"></script>
+    
 </head>
 
 
-<script src="js/validator.min.js"></script>
+
 
 
 <body class="bg-light">
     <!--Navbar-->
+<!-- Imagem e texto -->
+<nav class="navbar navbar-light bg-warning">
+    <a class="navbar-brand" href="#">
+      <img src="assets/img/paraty logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Paraty-RJ
+    </a>
+  </nav>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-        <a class="navbar-brand" href="#"><strong>Paraty</strong></a>
+        <a class="navbar-brand" href="#"><strong>Bem Vindo</strong></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
             aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
@@ -110,7 +120,7 @@
             <div class="card">
                 <img class="card-img-top" src="assets/img/indio.jpg" alt="Imagem de capa do card">
                 <div class="card-body">
-                    <h5 class="card-title">ainda hoje se tem indios que habitam a região!</h5>
+                    <h5 class="card-title">Ainda hoje se tem indios que habitam a região!</h5>
                     <p class="card-text">A presença Guarani em terras paratienses reconta a tempos muito antigos onde o
                         mito da "Terra sem Mal" os trouxe para o litoral sul-fluminense.</p>
                 </div>
@@ -133,15 +143,15 @@
             <div class="card">
                 <img class="card-img-top" src="assets/img/hostel.jpg" alt="Imagem de capa do card">
                 <div class="card-body">
-                    <h5 class="card-title">Opçoes de pousadas</h5>
+                    <h5 class="card-title">Opções de pousadas</h5>
                     <p class="card-text">Essa é uma das inumeras pousadas que se tem na cidade, uma otima opção
                         inclusive como restaurante!.</p>
                     <p class="card-text"><small class="text-muted"></small></p>
                 </div>
             </div>
-            <div class="card bg-primary text-white text-center p-3">
+            <div class="card bg-secondary text-white text-center p-3">
                 <blockquote class="blockquote mb-0">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+                    <p><strong">"Viajar: primeiro te deixa sem palavras, depois te transforma em um contador de histórias."</strong></p>
                     <footer class="blockquote-footer">
                         <small>
                             <cite title="Título da fonte">Título da fonte</cite>
@@ -158,7 +168,7 @@
                         filmes e peças publicitárias.
                         Ninguém se esquece que foi em Paraty que Marcello Mastroianni/Nacib apaixonou-se por Sônia
                         Braga/Gabriela.</p>
-                    <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
+                    <p class="card-text"><small class="text-muted"></small></p>
                 </div>
             </div>
             <div class="card">
@@ -218,31 +228,34 @@
         <!--Contato-->
         <div class="row">
 <div class="col-md-5">
-    <h4>Entre contato com agente!</h4>
+    <h4>Tire suas duvidas!</h4>
 </div>
 
         </div>
         <div class="row d-flex align-items-center">
             <div class="col-md-6">
-              <form>
-                <div class="form-group">
-                  <label for="exampleFormControlInput1">Endereço de email</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
-                </div>
-               
+                <form >
+                <div class="form-group p-3">
+                <label for="email">E-mail:</label>
+                <input type="email"  id = "email" class="w-100" onkeyup="validaEmail()" required >
+                <div id="txtEmail"></div>
+                <br>
+               <br>
                 <div class="form-group">
                   <label for="exampleFormControlTextarea1">Envia sua mensagem para nós!</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  <textarea name="assunto" class="form-control" id="assunto" rows="3" required></textarea>
                 </div>
       
                 <div class="form-group d-flex justify-content-end">
-                  <button class="btn btn-primary">Enviar</button>
+                  <button class="btn btn-primary"  >Enviar</button>
                 </div>
               </form>
+            </div>
             </div>
       
             <div class="col-md-6">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29333.614259182377!2d-44.7421861921133!3d-23.217536290437934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9d6d04d08d0dd9%3A0xea35e93f7a8ac64d!2sParaty%2C%20RJ!5e0!3m2!1spt-BR!2sbr!4v1629423353186!5m2!1spt-BR!2sbr" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
             </div>
           </div>
       
@@ -282,9 +295,7 @@
     </div>
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
