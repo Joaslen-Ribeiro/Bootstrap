@@ -27,5 +27,5 @@ function ValidaAssunto(){
     }else{
         txtAssunto.style.display ='none'
         assuntoOk = true
-    }
+   }
 }

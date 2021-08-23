@@ -1,0 +1,20 @@
+
+#tm{
+    font-size: 5px;
+}
+.imagem{
+    
+    float: left;
+    margin: 0 20px 20px 0;  
+}
+.texto-explicando{
+    text-align: center;
+    margin-top: 4%;
+}
+header p{
+    margin: 1 1 1 1;
+}
+.text-center{
+    margin: 0 0 1em;
+    clear: left;
+}
